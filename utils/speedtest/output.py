@@ -89,12 +89,6 @@ def output(list, num):
         print('Write trojan splitted Success!')
         f.close()
 
-    with open(splitted_output.__add__("ssr.txt"), 'w') as f:
-        ssr_content = "\n".join(ssr_outputs)
-        f.write(ssr_content)
-        print('Write ssr splitted Success!')
-        f.close()
-
     with open(splitted_output.__add__("ss.txt"), 'w') as f:
         ss_content = "\n".join(ss_outputs)
         f.write(ss_content)
@@ -128,6 +122,6 @@ def output(list, num):
 
 
 if __name__ == '__main__':
-    num = 200
+    num = 175
     value = read_json(out_json)
     output(value, value.__len__() if value.__len__() <= num else num)
