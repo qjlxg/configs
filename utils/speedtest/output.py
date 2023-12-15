@@ -77,12 +77,6 @@ def output(list, num):
         if str(output).startswith("ss://"):
             ss_outputs.append(output)
 
-
-    ss_outputs = [output for output in output_list if str(output).startswith("ss://")]
-
-    # Keep only the first half of ss_outputs
-    ss_outputs = ss_outputs[:-len(ss_outputs)//2]
-    
     with open(splitted_output.__add__("vmess.txt"), 'w') as f:
         vmess_content = "\n".join(vmess_outputs)
         f.write(vmess_content)
