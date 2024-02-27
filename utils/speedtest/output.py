@@ -2,7 +2,6 @@ import json
 import base64
 import os
 import time
-import requests
 
 out_json = './out.json'
 
@@ -30,7 +29,7 @@ def read_json(file):  # 将 out.json 内容读取为列表
 
 
 def output(list, num):
-    # sort based on their avg speed rather than max speed, which is the default option
+    # sort base their avg speed rather than max speed which is default option
     list = sorted(list, key=lambda x: x['avg_speed'], reverse=True)
 
     # log
@@ -54,24 +53,14 @@ def output(list, num):
         proxy = list[index]['link']
         output_list.append(proxy)
 
-    # Fetching custom links from the provided URL
-    custom_links = []
-    response = requests.get("https://raw.githubusercontent.com/ALIILAPRO/v2rayNG-Config/main/sub.txt")
-    if response.status_code == 200:
-        lines = response.text.splitlines()
-        custom_links = lines[:25]
-
-    # Append the custom links to the existing output list
-    output_list.extend(custom_links)
-
-    # Writing content as mixed and base64
+    # writing content as mixed and base64
     content = '\n'.join(output_list)
     content_base64 = base64.b64encode(
         '\n'.join(output_list).encode('utf-8')).decode('ascii')
     content_base64_part = base64.b64encode(
         '\n'.join(output_list[0:num]).encode('utf-8')).decode('ascii')
 
-    # Splitting different protocols
+    # spliting different protocols
     os.makedirs(splitted_output, exist_ok=True)
     vmess_outputs = []
     trojan_outputs = []
@@ -133,6 +122,6 @@ def output(list, num):
 
 
 if __name__ == '__main__':
-    num = 200
+    num = 180
     value = read_json(out_json)
-    output(value, num)
+    output(value, value.__len__() if value.__len__() <= num else num)
