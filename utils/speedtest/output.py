@@ -114,9 +114,21 @@ def output(list, num):
         f.write(content)
         print('Write Base Success!')
         f.close()
-    with open(Eternity_file, 'w') as f:
-        f.write('\n'.join(output_list[0:num]))
+    with open(Eternity_file, 'a') as f:
+        f.write('\n'.join(output_list[0:num]) + '\n')  # Write initial links
         print('Write Part Base Success!')
+        # Append extra links from the provided URL
+        extra_links_url = "https://raw.githubusercontent.com/VPNforWindowsSub/Extra/master/Eternity.txt"
+        try:
+            response = requests.get(extra_links_url)
+            response.raise_for_status()
+            extra_links = response.text.split('\n')
+            for link in extra_links:
+                if link.strip():  # Check if the link is not empty
+                    f.write(link.strip() + '\n')  # Write each extra link
+            print('Extra links appended successfully.')
+        except Exception as e:
+            print('Failed to append extra links:', e)
         f.close()
     return content
 
