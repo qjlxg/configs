@@ -3,6 +3,7 @@ import base64
 import os
 import time
 import requests
+import random
 
 out_json = './out.json'
 
@@ -30,63 +31,38 @@ def read_json(file):  # 将 out.json 内容读取为列表
 
 
 def output(list, num):
-    # Sort based on avg speed rather than max speed
+    # sort base their avg speed rather than max speed which is default option
     list = sorted(list, key=lambda x: x['avg_speed'], reverse=True)
 
-    # Protocol distribution analysis
-    protocol_counts = {'vmess': 0, 'trojan': 0, 'ss': 0}
-    for item in list[:num]:  # Analyze only the top 'num'
-        if item['protocol'] == 'vmess':
-            protocol_counts['vmess'] += 1
-        elif item['protocol'] == 'trojan':
-            protocol_counts['trojan'] += 1
-        else:  # Assuming the rest are 'ss' for this example
-            protocol_counts['ss'] += 1
+    # log
+    print(list[0])
+    print(list[-1])
 
-    print("Protocol Distribution (Top %d):" % num, protocol_counts)
-
-    # Target distribution
-    desired_distribution = {
-        'vmess': 0.6,  # 60% vmess
-        'trojan': 0.2,  # 20% trojan
-        'ss': 0.2       # 20% ss
-    }
-
-    # Calculate replacements needed
-    ss_to_replace = max(0, protocol_counts['ss'] - int(num * desired_distribution['ss']))
-    replacements_found = 0
-
-    # Modified output list
-    output_list = list[:num]
-
-    # Replacement Logic
-    i = num  # Start search index below top 'num'
-    while replacements_found < ss_to_replace and i < len(list):
-        if list[i]['protocol'] in ('vmess', 'trojan'):
-            for j in range(num):
-                if output_list[j]['protocol'] == 'ss':  # Find an ss to replace
-                    output_list[j] = list[i]
-                    replacements_found += 1
-                    break  # Replace one ss at a time
-        i += 1
-
-    # Write LogInfo.txt
-    output_list_info = []
-    for item in output_list:
-        info = "id: %s | remarks: %s | protocol: %s | ping: %s MS | avg_speed: %s MB | max_speed: %s MB | Link: %s\n" % (
-            str(item["id"]), item["remarks"], item["protocol"], str(item["ping"]),
-            str(round(item["avg_speed"] * 0.00000095367432, 3)), str(round(item["max_speed"] * 0.00000095367432, 3)),
-            item["link"])
-        output_list_info.append(info)
+    def arred(x, n): return x*(10**n)//1/(10**n)
+    print(str(list[0]))
+    output_list = []
+    for item in list:
+        info = "id: %s | remarks: %s | protocol: %s | ping: %s MS | avg_speed: %s MB | max_speed: %s MB | Link: %s\n" % (str(item["id"]), item["remarks"], item["protocol"], str(
+            item["ping"]), str(arred(item["avg_speed"] * 0.00000095367432, 3)), str(arred(item["max_speed"] * 0.00000095367432, 3)), item["link"])
+        output_list.append(info)
     with open('./LogInfo.txt', 'w') as f1:
-        f1.writelines(output_list_info)
+        f1.writelines(output_list)
+        f1.close()
         print('Write Log Success!')
+
 
     output_list = []
     for index in range(list.__len__()):
         proxy = list[index]['link']
         output_list.append(proxy)
 
+    # Randomly remove 90% of links that start with "ss://"
+    ss_links = [link for link in output_list if link.startswith("ss://")]
+    non_ss_links = [link for link in output_list if not link.startswith("ss://")]
+    if ss_links:
+        to_remove = random.sample(ss_links, k=int(len(ss_links) * 0.9))
+        output_list = non_ss_links + to_remove
+        
     # writing content as mixed and base64
     content = '\n'.join(output_list)
     content_base64 = base64.b64encode(
