@@ -56,17 +56,17 @@ def output(list, num):
         proxy = list[index]['link']
         output_list.append(proxy)
 
-    # Get top 700 links
-    top_200_links = [item['link'] for item in list[:700]]
+    # Get top 400 links
+    top_400_links = [item['link'] for item in list[:400]]
 
-    # Get indices of 'ss://' links among top 700 links
-    ss_indices = [i for i, link in enumerate(top_200_links) if link.startswith("ss://")]
+    # Get indices of 'ss://' links among top 400 links
+    ss_indices = [i for i, link in enumerate(top_400_links) if link.startswith("ss://")]
 
     # Randomly select 20% of 'ss://' links to keep
     if ss_indices:
         to_keep = random.sample(ss_indices, k=int(len(ss_indices) * 0.2))
         # Remove all 'ss://' links except those selected to keep
-        top_200_links = [link for i, link in enumerate(top_200_links) if i in to_keep or not link.startswith("ss://")]
+        top_400_links = [link for i, link in enumerate(top_400_links) if i in to_keep or not link.startswith("ss://")]
 
         
     # writing content as mixed and base64
