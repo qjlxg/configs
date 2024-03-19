@@ -147,6 +147,6 @@ def output(list, num):
 
 
 if __name__ == '__main__':
-    num = 170
+    num = 165
     value = read_json(out_json)
     output(value, value.__len__() if value.__len__() <= num else num)
