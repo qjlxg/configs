@@ -66,7 +66,7 @@ def output(list, num):
         elif trojan_count < num // 4 and item['protocol'] == 'trojan':  # Prioritize trojan
             filtered_list.append(item['link'])
             trojan_count += 1
-        elif ss_count < num // 4 and item['protocol'] == 'ss':  # Limit ss
+        elif ss_count < num // 12 and item['protocol'] == 'ss':  # Limit ss
             filtered_list.append(item['link'])
             ss_count += 1
 
