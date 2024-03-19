@@ -56,12 +56,18 @@ def output(list, num):
         proxy = list[index]['link']
         output_list.append(proxy)
 
-    # Randomly remove 90% of links that start with "ss://"
-    ss_links = [link for link in output_list if link.startswith("ss://")]
-    non_ss_links = [link for link in output_list if not link.startswith("ss://")]
-    if ss_links:
-        to_remove = random.sample(ss_links, k=int(len(ss_links) * 0.9))
-        output_list = non_ss_links + to_remove
+    # Get top 200 links
+    top_200_links = [item['link'] for item in list[:500]]
+
+    # Get indices of 'ss://' links among top 200 links
+    ss_indices = [i for i, link in enumerate(top_200_links) if link.startswith("ss://")]
+
+    # Randomly select 20% of 'ss://' links to keep
+    if ss_indices:
+        to_keep = random.sample(ss_indices, k=int(len(ss_indices) * 0.2))
+        # Remove all 'ss://' links except those selected to keep
+        top_200_links = [link for i, link in enumerate(top_200_links) if i in to_keep or not link.startswith("ss://")]
+
         
     # writing content as mixed and base64
     content = '\n'.join(output_list)
