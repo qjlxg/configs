@@ -56,10 +56,10 @@ def output(list, num):
         proxy = list[index]['link']
         output_list.append(proxy)
 
-    # Get top 200 links
-    top_200_links = [item['link'] for item in list[:500]]
+    # Get top 700 links
+    top_200_links = [item['link'] for item in list[:700]]
 
-    # Get indices of 'ss://' links among top 200 links
+    # Get indices of 'ss://' links among top 700 links
     ss_indices = [i for i, link in enumerate(top_200_links) if link.startswith("ss://")]
 
     # Randomly select 20% of 'ss://' links to keep
