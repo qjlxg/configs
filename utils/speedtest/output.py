@@ -30,48 +30,57 @@ def read_json(file):  # 将 out.json 内容读取为列表
 
 
 def output(list, num):
-    # Sort based on avg speed
+    # Sort based on avg speed rather than max speed
     list = sorted(list, key=lambda x: x['avg_speed'], reverse=True)
 
-    # Log top and bottom entries
-    print(list[0])
-    print(list[-1])
+    # Protocol distribution analysis
+    protocol_counts = {'vmess': 0, 'trojan': 0, 'ss': 0}
+    for item in list[:num]:  # Analyze only the top 'num'
+        if item['protocol'] == 'vmess':
+            protocol_counts['vmess'] += 1
+        elif item['protocol'] == 'trojan':
+            protocol_counts['trojan'] += 1
+        else:  # Assuming the rest are 'ss' for this example
+            protocol_counts['ss'] += 1
 
-    def arred(x, n): return x * (10**n) // 1 / (10**n)
-    print(str(list[0]))
+    print("Protocol Distribution (Top %d):" % num, protocol_counts)
 
-    # Prepare log output
-    output_list = []
-    for item in list:
+    # Target distribution
+    desired_distribution = {
+        'vmess': 0.6,  # 60% vmess
+        'trojan': 0.2,  # 20% trojan
+        'ss': 0.2       # 20% ss
+    }
+
+    # Calculate replacements needed
+    ss_to_replace = max(0, protocol_counts['ss'] - int(num * desired_distribution['ss']))
+    replacements_found = 0
+
+    # Modified output list
+    output_list = list[:num]
+
+    # Replacement Logic
+    i = num  # Start search index below top 'num'
+    while replacements_found < ss_to_replace and i < len(list):
+        if list[i]['protocol'] in ('vmess', 'trojan'):
+            for j in range(num):
+                if output_list[j]['protocol'] == 'ss':  # Find an ss to replace
+                    output_list[j] = list[i]
+                    replacements_found += 1
+                    break  # Replace one ss at a time
+        i += 1
+
+    # Write LogInfo.txt
+    output_list_info = []
+    for item in output_list:
         info = "id: %s | remarks: %s | protocol: %s | ping: %s MS | avg_speed: %s MB | max_speed: %s MB | Link: %s\n" % (
             str(item["id"]), item["remarks"], item["protocol"], str(item["ping"]),
-            str(arred(item["avg_speed"] * 0.00000095367432, 3)),
-            str(arred(item["max_speed"] * 0.00000095367432, 3)), item["link"])
-        output_list.append(info)
+            str(round(item["avg_speed"] * 0.00000095367432, 3)), str(round(item["max_speed"] * 0.00000095367432, 3)),
+            item["link"])
+        output_list_info.append(info)
     with open('./LogInfo.txt', 'w') as f1:
-        f1.writelines(output_list)
-        f1.close()
+        f1.writelines(output_list_info)
         print('Write Log Success!')
-
-    # Filter and prioritize links
-    filtered_list = []
-    vmess_count = 0
-    trojan_count = 0
-    ss_count = 0
-
-    for item in list:
-        if vmess_count < num // 2 and item['protocol'] == 'vmess':  # Prioritize vmess
-            filtered_list.append(item['link'])
-            vmess_count += 1
-        elif trojan_count < num // 4 and item['protocol'] == 'trojan':  # Prioritize trojan
-            filtered_list.append(item['link'])
-            trojan_count += 1
-        elif ss_count < num // 12 and item['protocol'] == 'ss':  # Limit ss
-            filtered_list.append(item['link'])
-            ss_count += 1
-
-        if len(filtered_list) == num:  # Stop if we reach the desired number
-            break
 
     output_list = []
     for index in range(list.__len__()):
@@ -147,6 +156,6 @@ def output(list, num):
 
 
 if __name__ == '__main__':
-    num = 165
+    num = 170
     value = read_json(out_json)
     output(value, value.__len__() if value.__len__() <= num else num)
