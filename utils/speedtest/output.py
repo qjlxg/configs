@@ -30,24 +30,48 @@ def read_json(file):  # 将 out.json 内容读取为列表
 
 
 def output(list, num):
-    # sort base their avg speed rather than max speed which is default option
+    # Sort based on avg speed
     list = sorted(list, key=lambda x: x['avg_speed'], reverse=True)
 
-    # log
+    # Log top and bottom entries
     print(list[0])
     print(list[-1])
 
-    def arred(x, n): return x*(10**n)//1/(10**n)
+    def arred(x, n): return x * (10**n) // 1 / (10**n)
     print(str(list[0]))
+
+    # Prepare log output
     output_list = []
     for item in list:
-        info = "id: %s | remarks: %s | protocol: %s | ping: %s MS | avg_speed: %s MB | max_speed: %s MB | Link: %s\n" % (str(item["id"]), item["remarks"], item["protocol"], str(
-            item["ping"]), str(arred(item["avg_speed"] * 0.00000095367432, 3)), str(arred(item["max_speed"] * 0.00000095367432, 3)), item["link"])
+        info = "id: %s | remarks: %s | protocol: %s | ping: %s MS | avg_speed: %s MB | max_speed: %s MB | Link: %s\n" % (
+            str(item["id"]), item["remarks"], item["protocol"], str(item["ping"]),
+            str(arred(item["avg_speed"] * 0.00000095367432, 3)),
+            str(arred(item["max_speed"] * 0.00000095367432, 3)), item["link"])
         output_list.append(info)
     with open('./LogInfo.txt', 'w') as f1:
         f1.writelines(output_list)
         f1.close()
         print('Write Log Success!')
+
+    # Filter and prioritize links
+    filtered_list = []
+    vmess_count = 0
+    trojan_count = 0
+    ss_count = 0
+
+    for item in list:
+        if vmess_count < num // 2 and item['protocol'] == 'vmess':  # Prioritize vmess
+            filtered_list.append(item['link'])
+            vmess_count += 1
+        elif trojan_count < num // 4 and item['protocol'] == 'trojan':  # Prioritize trojan
+            filtered_list.append(item['link'])
+            trojan_count += 1
+        elif ss_count < num // 4 and item['protocol'] == 'ss':  # Limit ss
+            filtered_list.append(item['link'])
+            ss_count += 1
+
+        if len(filtered_list) == num:  # Stop if we reach the desired number
+            break
 
     output_list = []
     for index in range(list.__len__()):
