@@ -3,7 +3,6 @@ import base64
 import os
 import time
 import requests
-import random
 
 out_json = './out.json'
 
@@ -50,25 +49,11 @@ def output(list, num):
         f1.close()
         print('Write Log Success!')
 
-
     output_list = []
     for index in range(list.__len__()):
         proxy = list[index]['link']
         output_list.append(proxy)
 
-    # Get top 400 links
-    top_400_links = [item['link'] for item in list[:400]]
-
-    # Get indices of 'ss://' links among top 400 links
-    ss_indices = [i for i, link in enumerate(top_400_links) if link.startswith("ss://")]
-
-    # Randomly select 20% of 'ss://' links to keep
-    if ss_indices:
-        to_keep = random.sample(ss_indices, k=int(len(ss_indices) * 0.2))
-        # Remove all 'ss://' links except those selected to keep
-        top_400_links = [link for i, link in enumerate(top_400_links) if i in to_keep or not link.startswith("ss://")]
-
-        
     # writing content as mixed and base64
     content = '\n'.join(output_list)
     content_base64 = base64.b64encode(
@@ -138,6 +123,6 @@ def output(list, num):
 
 
 if __name__ == '__main__':
-    num = 170
+    num = 165
     value = read_json(out_json)
     output(value, value.__len__() if value.__len__() <= num else num)
