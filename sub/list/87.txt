@@ -19,8 +19,6 @@
   - {name: TR | vmess | @ShadowProxy66 | 6, server: 45.89.52.114, port: 13701, type: vmess, uuid: 86a0c17d-1871-40e3-db65-2b9bf1a7650e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
   - {name: CF | vmess | @v2ray1_ng | 7, server: 188.114.97.3, port: 443, type: vmess, uuid: f584de15-2034-4170-a723-f48c2bae5e0f, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, servername: afrhms16v.bestxray.buzz, network: ws, ws-opts: {path: /linkws, headers: {Host: afrhms16v.bestxray.buzz}}}
   - {name: 🇩🇪 DE | vmess | @vless_vmess | 1, server: 128.140.117.167, port: 2086, type: vmess, uuid: FILTERSHCAN, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: ❔XX | vmess | @DailyV2RY | 182, server: "", port: 0, type: vmess, uuid: 00000000-0000-0000-0000-000000000000, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: IR | vmess | @proxystore11 | 5, server: ipir.proxystore11.ru, port: 80, type: vmess, uuid: 7192fa3c-71c6-4662-be3f-3a19a3b7ac4d, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, servername: speedtest.net}
   - {name: 🇳🇱 NL | vmess | @yaney_01 | 1, server: 45.199.138.217, port: 41000, type: vmess, uuid: f9fa3a9c-f7d5-414f-88e6-6970585d9949, alterId: 64, cipher: auto, tls: true, skip-cert-verify: false, network: ws, ws-opts: {path: /path/282018252526}}
   - {name: 🇺🇸 US | vmess | @yaney_01 | 2, server: 107.149.119.43, port: 37000, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto, tls: true, skip-cert-verify: false, network: ws, ws-opts: {path: /path/040318142507}}
   - {name: ❔XX | vmess | @yaney_01 | 3, server: admin.arzonhost.ir, port: 2086, type: vmess, uuid: 7d93e992-48cf-42d4-84f8-75768e815a4c, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: admin.arzonhost.ir}}}
@@ -38,36 +36,35 @@
   - {name: 🇺🇸 US | vmess | @kingofilter | 3, server: zula.ir, port: 2096, type: vmess, uuid: da2aa762-9c57-49c1-9ecd-cdc1f18493a7, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, servername: join.hightechservice.ir, network: ws, ws-opts: {path: /, headers: {Host: join.hightechservice.ir}}}
   - {name: 🇺🇸 US | vmess | @kingofilter | 5, server: zula.ir, port: 2096, type: vmess, uuid: f92701e4-2394-4771-9599-5f291edc19ff, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, servername: kingo.hightechservice.ir, network: ws, ws-opts: {path: /, headers: {Host: kingo.hightechservice.ir}}}
   - {name: 🇺🇸 US | vmess | @kingofilter | 7, server: zula.ir, port: 2096, type: vmess, uuid: 11cfd86e-c3a9-42b2-803f-1bdbca3dcb28, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, servername: kingo.hightechservice.ir, network: ws, ws-opts: {path: /, headers: {Host: kingo.hightechservice.ir}}}
-  - {name: 🇸🇬 SG | ss | @OutlineVpnOfficial | 10, server: 91.192.81.21, port: 8388, type: ss, cipher: chacha20-ietf-poly1305, password: 1q7RNKaIk2wYO8fEPmEX0vWQ7Va+QRTA}
-  - {name: 🇵🇱 PL | ss | @OutlineVpnOfficial | 11, server: 77.83.246.74, port: 33320, type: ss, cipher: chacha20-ietf-poly1305, password: 4Zwn5rmrUddm1PcGThN114}
-  - {name: 🇵🇱 PL | ss | @OutlineVpnOfficial | 12, server: 51.77.53.200, port: 8881, type: ss, cipher: aes-256-gcm, password: kDWvXYZoTBcGkC4}
-  - {name: 🇳🇱 NL | ss | @OutlineVpnOfficial | 13, server: 167.71.77.212, port: 62062, type: ss, cipher: chacha20-ietf-poly1305, password: UeCtaK8vx4M5UfYOXzCXt5}
-  - {name: 🇬🇧 GB | ss | @OutlineVpnOfficial | 14, server: 142.202.51.58, port: 8080, type: ss, cipher: aes-256-gcm, password: KixLvKzwjekG00rm}
-  - {name: 🇫🇷 FR | ss | @OutlineVpnOfficial | 15, server: 149.202.82.172, port: 8008, type: ss, cipher: aes-256-gcm, password: XKFKl2rULjIp74}
-  - {name: 🇩🇪 DE | ss | @OutlineVpnOfficial | 16, server: 81.19.141.45, port: 52873, type: ss, cipher: chacha20-ietf-poly1305, password: BXkeUSabwj1rRTj4cLT3O5}
-  - {name: 🇨🇦 CA | ss | @OutlineVpnOfficial | 17, server: 23.162.200.28, port: 3389, type: ss, cipher: aes-256-gcm, password: Y6R9pAtvxxzmGC}
-  - {name: 🇩🇪 DE | ss | @OutlineVpnOfficial | 18, server: 185.65.202.99, port: 49318, type: ss, cipher: chacha20-ietf-poly1305, password: cNnrPBakDwICGyoxsDcLy5}
-  - {name: 🇳🇱 NL | ss | @OutlineVpnOfficial | 19, server: 193.29.139.162, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: a8bt9fY0QsLS6eLnXUe0Ym}
-  - {name: SE | trojan | @PrivateVPNs | 8, server: 13.48.39.54, port: 22222, type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk, skip-cert-verify: false}
-  - {name: SE | trojan | @PrivateVPNs | 9, server: 13.50.54.63, port: 22222, type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk, skip-cert-verify: false}
-  - {name: IE | trojan | @PrivateVPNs | 10, server: 52.213.187.215, port: 22222, type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk, skip-cert-verify: false}
-  - {name: IE | trojan | @PrivateVPNs | 11, server: 108.128.147.80, port: 22222, type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk, skip-cert-verify: false}
-  - {name: 🇬🇧 GB | trojan | @PrivateVPNs | 12, server: 3.11.208.177, port: 22222, type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk, skip-cert-verify: false}
-  - {name: 🇬🇧 GB | trojan | @PrivateVPNs | 13, server: 3.10.40.133, port: 22222, type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk, skip-cert-verify: false}
-  - {name: 🇫🇷 FR | trojan | @PrivateVPNs | 14, server: 13.39.196.208, port: 22222, type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk, skip-cert-verify: false}
-  - {name: 🇫🇷 FR | trojan | @PrivateVPNs | 15, server: 15.236.129.77, port: 22222, type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk, skip-cert-verify: false}
-  - {name: 🇩🇪 DE | trojan | @PrivateVPNs | 16, server: 3.73.194.167, port: 22222, type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk, skip-cert-verify: false}
-  - {name: 🇩🇪 DE | trojan | @PrivateVPNs | 17, server: 35.159.182.222, port: 22222, type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk, skip-cert-verify: false}
-  - {name: 🇨🇦 CA | trojan | @DirectVPN | 8, server: 15.157.105.55, port: 22222, type: trojan, password: telegram-id-directvpn, sni: trojan.burgerip.co.uk, skip-cert-verify: false}
-  - {name: IE | trojan | @DirectVPN | 9, server: 52.30.164.212, port: 22222, type: trojan, password: telegram-id-directvpn, sni: trojan.burgerip.co.uk, skip-cert-verify: false}
-  - {name: IE | trojan | @DirectVPN | 10, server: 34.251.35.79, port: 22222, type: trojan, password: telegram-id-directvpn, sni: trojan.burgerip.co.uk, skip-cert-verify: false}
-  - {name: 🇬🇧 GB | trojan | @DirectVPN | 11, server: 18.169.87.161, port: 22222, type: trojan, password: telegram-id-directvpn, sni: trojan.burgerip.co.uk, skip-cert-verify: false}
-  - {name: 🇬🇧 GB | trojan | @DirectVPN | 12, server: 35.177.214.176, port: 22222, type: trojan, password: telegram-id-directvpn, sni: trojan.burgerip.co.uk, skip-cert-verify: false}
-  - {name: 🇫🇷 FR | trojan | @DirectVPN | 13, server: 15.237.66.70, port: 22222, type: trojan, password: telegram-id-directvpn, sni: trojan.burgerip.co.uk, skip-cert-verify: false}
-  - {name: 🇫🇷 FR | trojan | @DirectVPN | 14, server: 15.237.236.171, port: 22222, type: trojan, password: telegram-id-directvpn, sni: trojan.burgerip.co.uk, skip-cert-verify: false}
-  - {name: SE | trojan | @DirectVPN | 15, server: 13.60.135.222, port: 22222, type: trojan, password: telegram-id-directvpn, sni: trojan.burgerip.co.uk, skip-cert-verify: false}
-  - {name: SE | trojan | @DirectVPN | 16, server: 13.49.132.11, port: 22222, type: trojan, password: telegram-id-directvpn, sni: trojan.burgerip.co.uk, skip-cert-verify: false}
-  - {name: 🇩🇪 DE | trojan | @DirectVPN | 17, server: 18.158.110.110, port: 22222, type: trojan, password: telegram-id-directvpn, sni: trojan.burgerip.co.uk, skip-cert-verify: false}
+  - {name: UA | ss | @OutlineVpnOfficial | 10, server: 130.0.233.247, port: 51348, type: ss, cipher: chacha20-ietf-poly1305, password: 9Eli0vyoLMRCQqln6HUVZEOrEqjG7Aefj6RBuxsxMQhMevOk}
+  - {name: 🇸🇬 SG | ss | @OutlineVpnOfficial | 11, server: 91.192.81.21, port: 8388, type: ss, cipher: chacha20-ietf-poly1305, password: 1q7RNKaIk2wYO8fEPmEX0vWQ7Va+QRTA}
+  - {name: 🇵🇱 PL | ss | @OutlineVpnOfficial | 12, server: 77.83.246.74, port: 33320, type: ss, cipher: chacha20-ietf-poly1305, password: 4Zwn5rmrUddm1PcGThN114}
+  - {name: 🇵🇱 PL | ss | @OutlineVpnOfficial | 13, server: 51.77.53.200, port: 8881, type: ss, cipher: aes-256-gcm, password: kDWvXYZoTBcGkC4}
+  - {name: 🇳🇱 NL | ss | @OutlineVpnOfficial | 14, server: 167.71.77.212, port: 62062, type: ss, cipher: chacha20-ietf-poly1305, password: UeCtaK8vx4M5UfYOXzCXt5}
+  - {name: 🇬🇧 GB | ss | @OutlineVpnOfficial | 15, server: 142.202.51.58, port: 8080, type: ss, cipher: aes-256-gcm, password: KixLvKzwjekG00rm}
+  - {name: 🇫🇷 FR | ss | @OutlineVpnOfficial | 16, server: 149.202.82.172, port: 8008, type: ss, cipher: aes-256-gcm, password: XKFKl2rULjIp74}
+  - {name: 🇩🇪 DE | ss | @OutlineVpnOfficial | 17, server: 81.19.141.45, port: 52873, type: ss, cipher: chacha20-ietf-poly1305, password: BXkeUSabwj1rRTj4cLT3O5}
+  - {name: 🇨🇦 CA | ss | @OutlineVpnOfficial | 18, server: 23.162.200.28, port: 3389, type: ss, cipher: aes-256-gcm, password: Y6R9pAtvxxzmGC}
+  - {name: 🇩🇪 DE | ss | @OutlineVpnOfficial | 19, server: 185.65.202.99, port: 49318, type: ss, cipher: chacha20-ietf-poly1305, password: cNnrPBakDwICGyoxsDcLy5}
+  - {name: 🇩🇪 DE | trojan | @PrivateVPNs | 8, server: 18.199.43.21, port: 22222, type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk, skip-cert-verify: false}
+  - {name: SE | trojan | @PrivateVPNs | 9, server: 13.48.39.54, port: 22222, type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk, skip-cert-verify: false}
+  - {name: SE | trojan | @PrivateVPNs | 10, server: 13.50.54.63, port: 22222, type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk, skip-cert-verify: false}
+  - {name: IE | trojan | @PrivateVPNs | 11, server: 52.213.187.215, port: 22222, type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk, skip-cert-verify: false}
+  - {name: IE | trojan | @PrivateVPNs | 12, server: 108.128.147.80, port: 22222, type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk, skip-cert-verify: false}
+  - {name: 🇬🇧 GB | trojan | @PrivateVPNs | 13, server: 3.11.208.177, port: 22222, type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk, skip-cert-verify: false}
+  - {name: 🇬🇧 GB | trojan | @PrivateVPNs | 14, server: 3.10.40.133, port: 22222, type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk, skip-cert-verify: false}
+  - {name: 🇫🇷 FR | trojan | @PrivateVPNs | 15, server: 13.39.196.208, port: 22222, type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk, skip-cert-verify: false}
+  - {name: 🇫🇷 FR | trojan | @PrivateVPNs | 16, server: 15.236.129.77, port: 22222, type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk, skip-cert-verify: false}
+  - {name: 🇩🇪 DE | trojan | @PrivateVPNs | 17, server: 3.73.194.167, port: 22222, type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk, skip-cert-verify: false}
+  - {name: 🇨🇦 CA | trojan | @DirectVPN | 8, server: 15.157.199.182, port: 22222, type: trojan, password: telegram-id-directvpn, sni: trojan.burgerip.co.uk, skip-cert-verify: false}
+  - {name: 🇨🇦 CA | trojan | @DirectVPN | 9, server: 15.157.105.55, port: 22222, type: trojan, password: telegram-id-directvpn, sni: trojan.burgerip.co.uk, skip-cert-verify: false}
+  - {name: IE | trojan | @DirectVPN | 10, server: 52.30.164.212, port: 22222, type: trojan, password: telegram-id-directvpn, sni: trojan.burgerip.co.uk, skip-cert-verify: false}
+  - {name: IE | trojan | @DirectVPN | 11, server: 34.251.35.79, port: 22222, type: trojan, password: telegram-id-directvpn, sni: trojan.burgerip.co.uk, skip-cert-verify: false}
+  - {name: 🇬🇧 GB | trojan | @DirectVPN | 12, server: 18.169.87.161, port: 22222, type: trojan, password: telegram-id-directvpn, sni: trojan.burgerip.co.uk, skip-cert-verify: false}
+  - {name: 🇬🇧 GB | trojan | @DirectVPN | 13, server: 35.177.214.176, port: 22222, type: trojan, password: telegram-id-directvpn, sni: trojan.burgerip.co.uk, skip-cert-verify: false}
+  - {name: 🇫🇷 FR | trojan | @DirectVPN | 14, server: 15.237.66.70, port: 22222, type: trojan, password: telegram-id-directvpn, sni: trojan.burgerip.co.uk, skip-cert-verify: false}
+  - {name: 🇫🇷 FR | trojan | @DirectVPN | 15, server: 15.237.236.171, port: 22222, type: trojan, password: telegram-id-directvpn, sni: trojan.burgerip.co.uk, skip-cert-verify: false}
+  - {name: SE | trojan | @DirectVPN | 16, server: 13.60.135.222, port: 22222, type: trojan, password: telegram-id-directvpn, sni: trojan.burgerip.co.uk, skip-cert-verify: false}
+  - {name: SE | trojan | @DirectVPN | 17, server: 13.49.132.11, port: 22222, type: trojan, password: telegram-id-directvpn, sni: trojan.burgerip.co.uk, skip-cert-verify: false}
   - {name: 🇫🇷 FR | trojan | @VmessProtocol | 25, server: 62.210.82.54, port: 43118, type: trojan, password: ypDt8RkT7J, sni: wuxgk.phooeyunfold.com, skip-cert-verify: false}
   - {name: SE | trojan | @proxystore11 | 0, server: 51.20.210.67, port: 22222, type: trojan, password: telegram-id-directvpn, sni: trojan.burgerip.co.uk, skip-cert-verify: false}
-  - {name: 🇩🇪 DE | trojan | @proxystore11 | 1, server: 18.199.43.21, port: 22222, type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk, skip-cert-verify: false}
