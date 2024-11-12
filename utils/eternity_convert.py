@@ -45,7 +45,7 @@ def eternity_convert(file, config, output, provider_file_enabled=True):
     # # no conversion from base64 so udp is not a problem
     # subconvertor not working with only proxy url
     all_provider = subs_function.convert_sub(
-        "https://raw.githubusercontent.com/mahdibland/SSAggregator/master/sub/sub_merge_base64.txt", 'clash', "http://0.0.0.0:25500", False, extra_options="&udp=false")
+        "https://github.com/qjlxg/configs/raw/refs/heads/master/sub/sub_merge_base64.txt", 'clash', "http://0.0.0.0:25500", False, extra_options="&udp=false")
 
     ##########   Add Name to Logs Before making chaages to Proxies  ############
     temp_providers = all_provider.split('\n')
@@ -82,7 +82,7 @@ def eternity_convert(file, config, output, provider_file_enabled=True):
         f"removed_bad_char count => {removed_bad_char.__len__()} & log_lines_without_bad_char count => {log_lines_without_bad_char.__len__()}")
 
     # take a part from begining of all lines
-    num = 200
+    num = 486
     num = removed_bad_char.__len__() if removed_bad_char.__len__() <= num else num
 
     # convert the safe partition to yaml format
