@@ -123,6 +123,6 @@ def output(list, num):
 
 
 if __name__ == '__main__':
-    num = 86
+    num = 586
     value = read_json(out_json)
     output(value, value.__len__() if value.__len__() <= num else num)
