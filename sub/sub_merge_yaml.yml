@@ -58,7 +58,7 @@ proxies:
   - {'name': '🇺🇸US-194.116.173.21-064', 'server': '194.116.173.21', 'port': 9038, 'type': 'ss', 'cipher': 'aes-256-cfb', 'password': 'gYCYXfkUQEs2TaJQ'}
   - {'name': '🇫🇷FR-51.158.244.38-065', 'server': '51.158.244.38', 'port': 8080, 'type': 'ss', 'cipher': 'rc4-md5', 'password': '14fFPrbezE3HDZzsMOr6'}
   - {'name': '🇬🇧GB-169.150.210.233-066', 'server': '169.150.210.233', 'port': 8080, 'type': 'ss', 'cipher': 'rc4-md5', 'password': '14fFPrbezE3HDZzsMOr6'}
-  - {'name': '🇩🇪DE-130.61.156.132-067', 'server': 'frankfurt03.zgjok.com', 'port': 443, 'type': 'vmess', 'uuid': '4f7c2243-a38a-4672-983b-f1378aee0a7f', 'alterId': 0, 'cipher': 'auto', 'tls': True, 'skip-cert-verify': False, 'servername': '🇩🇪DE-130.61.156.132-0516 | 44.898MB', 'network': 'ws', 'ws-opts': {'path': '/', 'headers': {'Host': 'frankfurt03.zgjok.com'}}}
+  - {'name': '🇩🇪DE-130.61.156.132-067', 'server': 'frankfurt03.zgjok.com', 'port': 443, 'type': 'vmess', 'uuid': '4f7c2243-a38a-4672-983b-f1378aee0a7f', 'alterId': 0, 'cipher': 'auto', 'tls': True, 'skip-cert-verify': False, 'servername': '🇩🇪DE-130.61.156.132-0516 | 62.163MB', 'network': 'ws', 'ws-opts': {'path': '/', 'headers': {'Host': 'frankfurt03.zgjok.com'}}}
   - {'name': '🇺🇸US-38.75.136.49-069', 'server': '38.75.136.49', 'port': 7306, 'type': 'ss', 'cipher': 'aes-256-gcm', 'password': 'FoOiGlkAA9yPEGP'}
   - {'name': '🇬🇧GB-146.70.61.18-070', 'server': '146.70.61.18', 'port': 8080, 'type': 'ss', 'cipher': 'rc4-md5', 'password': '14fFPrbezE3HDZzsMOr6'}
   - {'name': '🇨🇭CH-156.146.62.162-071', 'server': '156.146.62.162', 'port': 443, 'type': 'ss', 'cipher': 'aes-128-gcm', 'password': 'shadowsocks'}
@@ -78,14 +78,14 @@ proxies:
   - {'name': '🇺🇸US-205.134.180.137-086', 'server': '205.134.180.137', 'port': 443, 'type': 'ss', 'cipher': 'chacha20-ietf-poly1305', 'password': 'g13S7doXar0A'}
   - {'name': '🇷🇸RS-194.71.126.31-087', 'server': '194.71.126.31', 'port': 989, 'type': 'ss', 'cipher': 'aes-256-cfb', 'password': 'f8f7aCzcPKbsF8p3'}
   - {'name': '🇬🇧GB-141.98.101.182-088', 'server': '141.98.101.182', 'port': 443, 'type': 'ss', 'cipher': 'aes-128-gcm', 'password': 'shadowsocks'}
-  - {'name': '🏁RELAY-172.67.146.154-089', 'server': 'lamusa.daozhang.site', 'port': 8880, 'type': 'vmess', 'uuid': '1c1cb7fe-a929-4e47-b292-4073b63d2d4b', 'alterId': 0, 'cipher': 'auto', 'tls': False, 'skip-cert-verify': False, 'network': 'ws', 'ws-opts': {'path': '/', 'headers': {'Host': 'lamusa.daozhang.site'}}}
+  - {'name': '🏁RELAY-104.21.79.166-089', 'server': 'lamusa.daozhang.site', 'port': 8880, 'type': 'vmess', 'uuid': '1c1cb7fe-a929-4e47-b292-4073b63d2d4b', 'alterId': 0, 'cipher': 'auto', 'tls': False, 'skip-cert-verify': False, 'network': 'ws', 'ws-opts': {'path': '/', 'headers': {'Host': 'lamusa.daozhang.site'}}}
   - {'name': '🇺🇸US-205.134.180.151-090', 'server': '205.134.180.151', 'port': 443, 'type': 'ss', 'cipher': 'chacha20-ietf-poly1305', 'password': '5cp9Z3iWnJZ2'}
   - {'name': '🇬🇧GB-141.98.101.178-091', 'server': '141.98.101.178', 'port': 443, 'type': 'ss', 'cipher': 'aes-128-gcm', 'password': 'shadowsocks'}
   - {'name': '🇬🇧GB-141.98.101.179-092', 'server': '141.98.101.179', 'port': 443, 'type': 'ss', 'cipher': 'aes-128-gcm', 'password': 'shadowsocks'}
   - {'name': '🇹🇷TR-62.133.63.154-093', 'server': '62.133.63.154', 'port': 20255, 'type': 'ss', 'cipher': 'chacha20-ietf-poly1305', 'password': 'ebrYpJsRfFtlKuO2HygBoD'}
   - {'name': '🇺🇸US-38.75.136.49-094', 'server': '38.75.136.49', 'port': 8009, 'type': 'ss', 'cipher': 'aes-256-gcm', 'password': 'XKFKl2rULjIp74'}
   - {'name': '🇲🇩MD-178.175.134.2-095', 'server': '178.175.134.2', 'port': 989, 'type': 'ss', 'cipher': 'aes-256-cfb', 'password': 'f8f7aCzcPKbsF8p3'}
-  - {'name': '🇺🇸US-107.167.30.126-096', 'server': '107.167.30.126', 'port': 30000, 'type': 'vmess', 'uuid': '57f93e92-ebb9-4f16-9bdc-8225d2010995', 'alterId': 64, 'cipher': 'auto', 'tls': True, 'skip-cert-verify': False, 'servername': '🇺🇸US-107.167.30.126-0032 | 39.303MB', 'network': 'ws', 'ws-opts': {'path': '/', 'headers': {'Host': 'www.83645422.xyz'}}}
+  - {'name': '🇺🇸US-107.167.30.126-096', 'server': '107.167.30.126', 'port': 30000, 'type': 'vmess', 'uuid': '57f93e92-ebb9-4f16-9bdc-8225d2010995', 'alterId': 64, 'cipher': 'auto', 'tls': True, 'skip-cert-verify': False, 'servername': '🇺🇸US-107.167.30.126-0032 | 47.623MB', 'network': 'ws', 'ws-opts': {'path': '/', 'headers': {'Host': 'www.83645422.xyz'}}}
   - {'name': '🇯🇵JP-54.238.219.226-097', 'server': '54.238.219.226', 'port': 443, 'type': 'ss', 'cipher': 'aes-256-cfb', 'password': 'amazonskr05'}
   - {'name': '🇱🇹LT-45.87.175.192-098', 'server': '45.87.175.192', 'port': 8080, 'type': 'ss', 'cipher': 'chacha20-ietf-poly1305', 'password': 'cvII85TrW6n0OGyfpHVS1u'}
   - {'name': '🇺🇸US-152.70.115.209-099', 'server': '152.70.115.209', 'port': 45800, 'type': 'trojan', 'password': 'xjN4xcuPGg55', 'sni': 'h.522226.xyz', 'skip-cert-verify': False}
@@ -93,11 +93,11 @@ proxies:
   - {'name': '🇫🇮FI-213.108.23.243-102', 'server': '213.108.23.243', 'port': 15584, 'type': 'ss', 'cipher': 'chacha20-ietf-poly1305', 'password': 'qhG5a2pzGJldaRkmUPBnaj'}
   - {'name': '🇺🇸US-155.248.205.39-103', 'server': '155.248.205.39', 'port': 45601, 'type': 'trojan', 'password': 'xjN4xcuPGg', 'sni': 'f.522226.xyz', 'skip-cert-verify': False}
   - {'name': '🇰🇪KE-62.12.116.66-104', 'server': '62.12.116.66', 'port': 990, 'type': 'ss', 'cipher': 'chacha20-ietf-poly1305', 'password': 'f8f7aCzcPKbsF8p3'}
-  - {'name': '🇱🇹LT-45.87.175.188-105', 'server': 'beesyar.org', 'port': 8080, 'type': 'ss', 'cipher': 'chacha20-ietf-poly1305', 'password': 'cvII85TrW6n0OGyfpHVS1u'}
+  - {'name': '🇱🇹LT-45.87.175.199-105', 'server': 'beesyar.org', 'port': 8080, 'type': 'ss', 'cipher': 'chacha20-ietf-poly1305', 'password': 'cvII85TrW6n0OGyfpHVS1u'}
   - {'name': '🇬🇧GB-141.98.101.180-106', 'server': '141.98.101.180', 'port': 443, 'type': 'ss', 'cipher': 'aes-128-gcm', 'password': 'shadowsocks'}
   - {'name': '🇰🇪KE-62.12.116.66-107', 'server': '62.12.116.66', 'port': 989, 'type': 'ss', 'cipher': 'aes-256-cfb', 'password': 'f8f7aCzcPKbsF8p3'}
   - {'name': '🇰🇿KZ-213.156.137.67-109', 'server': '213.156.137.67', 'port': 989, 'type': 'ss', 'cipher': 'aes-256-cfb', 'password': 'f8f7aCzcPKbsF8p3'}
-  - {'name': '🇫🇷FR-45.145.165.133-110', 'server': 'hms24.ivideos.sbs', 'port': 443, 'type': 'vmess', 'uuid': '441da342-ce90-441e-bff9-d2ceb55e68ca', 'alterId': 0, 'cipher': 'auto', 'tls': True, 'skip-cert-verify': False, 'servername': '🇫🇷FR-45.145.165.133-3017 | 37.134MB', 'network': 'ws', 'ws-opts': {'path': '/', 'headers': {'Host': 'ivideos.sbs'}}}
+  - {'name': '🇩🇪DE-172.104.247.121-110', 'server': 'hms24.ivideos.sbs', 'port': 443, 'type': 'vmess', 'uuid': '441da342-ce90-441e-bff9-d2ceb55e68ca', 'alterId': 0, 'cipher': 'auto', 'tls': True, 'skip-cert-verify': False, 'servername': '🇫🇷FR-45.145.165.133-3017 | 42.957MB', 'network': 'ws', 'ws-opts': {'path': '/', 'headers': {'Host': 'ivideos.sbs'}}}
   - {'name': '🇰🇷KR-129.154.211.136-111', 'server': '129.154.211.136', 'port': 23451, 'type': 'vmess', 'uuid': '4fb84dd5-af44-464c-99c4-f1fe589652cf', 'alterId': 0, 'cipher': 'auto', 'tls': False, 'skip-cert-verify': False, 'network': 'ws', 'ws-opts': {'path': '/', 'headers': {'Host': 'seoul-1ddns.aboutanime.eu.org'}}}
   - {'name': '🇸🇬SG-68.183.227.45-112', 'server': '68.183.227.45', 'port': 8080, 'type': 'ss', 'cipher': 'rc4-md5', 'password': '14fFPrbezE3HDZzsMOr6'}
   - {'name': '🇸🇬SG-128.199.172.224-113', 'server': '128.199.172.224', 'port': 8080, 'type': 'ss', 'cipher': 'rc4-md5', 'password': '14fFPrbezE3HDZzsMOr6'}
@@ -127,7 +127,7 @@ proxies:
   - {'name': '🇮🇳IN-103.174.86.114-137', 'server': '103.174.86.114', 'port': 51348, 'type': 'ss', 'cipher': 'chacha20-ietf-poly1305', 'password': 'US4tskJaYStBPUKvcNVkf0PVhXbsAGCNvrhbfZybtOx9u2cF'}
   - {'name': '🇺🇸US-137.175.97.159-138', 'server': '137.175.97.159', 'port': 8388, 'type': 'ss', 'cipher': 'chacha20-ietf', 'password': 'asd123456'}
   - {'name': '🇵🇦PA-138.186.142.4-139', 'server': '138.186.142.4', 'port': 989, 'type': 'ss', 'cipher': 'aes-256-cfb', 'password': 'f8f7aCzcPKbsF8p3'}
-  - {'name': '🏁RELAY-104.21.13.222-140', 'server': '104.21.13.222', 'port': 8443, 'type': 'vmess', 'uuid': 'e88b85c6-93b4-47f6-b3fb-2c55dcb1289f', 'alterId': 0, 'cipher': 'auto', 'tls': True, 'skip-cert-verify': False, 'servername': 'RELAY-104.21.13.222-5048 | 34.296MB', 'network': 'ws', 'ws-opts': {'path': '/', 'headers': {'Host': 'lax2.ibgfw.top'}}}
+  - {'name': '🏁RELAY-104.21.13.222-140', 'server': '104.21.13.222', 'port': 8443, 'type': 'vmess', 'uuid': 'e88b85c6-93b4-47f6-b3fb-2c55dcb1289f', 'alterId': 0, 'cipher': 'auto', 'tls': True, 'skip-cert-verify': False, 'servername': 'RELAY-104.21.13.222-5048 | 28.869MB', 'network': 'ws', 'ws-opts': {'path': '/', 'headers': {'Host': 'lax2.ibgfw.top'}}}
   - {'name': '🇬🇧GB-77.72.5.113-141', 'server': '77.72.5.113', 'port': 989, 'type': 'ss', 'cipher': 'aes-256-cfb', 'password': 'f8f7aCzcPKbsF8p3'}
   - {'name': '🇪🇸ES-5.188.181.201-142', 'server': '5.188.181.201', 'port': 9014, 'type': 'ss', 'cipher': 'aes-256-cfb', 'password': 'KnJGad3FqTvjqbaX'}
   - {'name': '🇭🇰HK-141.98.234.93-143', 'server': '141.98.234.93', 'port': 20012, 'type': 'ss', 'cipher': 'chacha20-ietf-poly1305', 'password': 'WfmxKX2FBJRU0Ie9VLIYDL'}
@@ -146,7 +146,7 @@ proxies:
   - {'name': '🇪🇸ES-5.188.181.201-156', 'server': '5.188.181.201', 'port': 9042, 'type': 'ss', 'cipher': 'aes-256-cfb', 'password': 'S7KwUu7yBy58S3Ga'}
   - {'name': '🇺🇸US-35.88.126.102-157', 'server': '35.88.126.102', 'port': 443, 'type': 'ss', 'cipher': 'aes-256-cfb', 'password': 'amazonskr05'}
   - {'name': '🇩🇰DK-192.36.27.94-158', 'server': '192.36.27.94', 'port': 989, 'type': 'ss', 'cipher': 'aes-256-cfb', 'password': 'f8f7aCzcPKbsF8p3'}
-  - {'name': '🇬🇧GB-13.43.128.26-159', 'server': 'series-a2.varzesh360.co', 'port': 443, 'type': 'ss', 'cipher': 'chacha20-ietf-poly1305', 'password': 'mps3FwmDjLrWaOVg'}
+  - {'name': '🇬🇧GB-3.10.237.211-159', 'server': 'series-a2.varzesh360.co', 'port': 443, 'type': 'ss', 'cipher': 'chacha20-ietf-poly1305', 'password': 'mps3FwmDjLrWaOVg'}
   - {'name': '🇮🇪IE-23.92.127.134-160', 'server': '23.92.127.134', 'port': 989, 'type': 'ss', 'cipher': 'aes-256-cfb', 'password': 'f8f7aCzcPKbsF8p3'}
   - {'name': '🇵🇱PL-77.83.246.74-161', 'server': '77.83.246.74', 'port': 33320, 'type': 'ss', 'cipher': 'chacha20-ietf-poly1305', 'password': 'FCOR4JFoxa9R9Hk5lpFM9w'}
   - {'name': '🇮🇪IE-23.92.127.133-162', 'server': '23.92.127.133', 'port': 989, 'type': 'ss', 'cipher': 'aes-256-cfb', 'password': 'f8f7aCzcPKbsF8p3'}
